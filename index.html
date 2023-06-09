@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="page" class="column">
+    <div class="container__cabecalho column">
+      <header class="cabecalho row">
+        <h2 class="title">
+          Alura<span class="span__title">Books</span>
+        </h2>
+        <nav class="cabecalho__navigation row">
+          <ul class="row">
+            <li class="row">
+              <a href="#">Categorias</a>
+            </li>
+            <li class="row">
+              <a href="#">Favoritos</a>
+            </li>
+            <li class="row">
+              <a href="#">Minha Estante</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cabecalho__icones row">
+          <i class="ph ph-shopping-cart"></i>
+          <i class="ph ph-user-circle"></i>
+        </div>
+      </header>
+
+      <div class="cabecalho__banner row">
+        <h1>
+          Tela de cadastro
+        </h1>
+      </div>
+    </div>
+
+    <main class="principal__container row">
+      <form class="form__principal column">
+        <h2>
+          Dados de cadastro
+        </h2>
+
+        <fieldset class="form__inputs column">
+          <div class="legend__container">
+            <legend>Dados pessoais</legend>
+          </div>
+
+          <div class="form__inputs__container column">
+            <div class="input__content column">
+              <label for="nome">Nome Completo</label>
+              <input type="text" name="nome" id="nome" required />
+            </div>
+
+            <div class="data-e-contato row">
+              <div class="input__content column">
+                <label for="nascimento">Nascimento</label>
+                <input type="date" name="nascimento" id="nascimento" required />
+              </div>
+
+              <div class="input__content column">
+                <label for="contato">Contato</label>
+                <input type="number" name="contato" id="contato" placeholder="(xx) xxxxx-xxxx" required />
+              </div>
+            </div>
+
+            <div class="input__content column">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__inputs column">
+          <div class="legend__container">
+            <legend>Endereço</legend>
+          </div>
+
+          <div class="form__inputs__container column">
+           <div class="input__content column">
+             <label for="nome">CEP</label>
+             <input type="number" name="cep" id="cep" required />
+             <div class="erro"></div>
+           </div> 
+            
+            <div class="input__content column">
+              <label for="endereco">Endereço</label>
+              <input type="text" name="endereco" id="endereco" placeholder="EX: Rua 7 de setembro" required />
+            </div>
+
+            <div class="numero-complemento row">
+              <div class="input__content column">
+                <label for="numero">Número</label>
+                <input type="number" name="numero" id="numero" required />
+              </div>
+
+              <div class="input__content column">
+                <label for="complemento">complemento</label>
+                <input type="text" name="complemento" id="complemento" required />
+              </div>
+            </div>
+
+            <div class="input__content column">
+              <label for="bairro">Bairro</label>
+              <input type="text" name="bairro" id="bairro" required />
+            </div>
+
+            <div class="cidade-estado row">
+              <div class="input__content column">
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade">
+              </div>
+
+              <div class="input__content column">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar Formulário" class="submit">
+      </form>
+    </main>
+
+    <!-- <footer class="rodape">
+
+    </footer> -->
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
